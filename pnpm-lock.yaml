@@ -24,6 +24,31 @@ importers:
         specifier: ^5.8.3
         version: 5.9.3
 
+  packages/api:
+    dependencies:
+      '@repo/core':
+        specifier: workspace:*
+        version: link:../core
+      '@repo/validators':
+        specifier: workspace:*
+        version: link:../validators
+      '@trpc/server':
+        specifier: ^11.0.0
+        version: 11.17.0(typescript@5.9.3)
+      zod:
+        specifier: ^3.24.0
+        version: 3.25.76
+    devDependencies:
+      '@repo/config':
+        specifier: workspace:*
+        version: link:../config
+      typescript:
+        specifier: ^5.8.3
+        version: 5.9.3
+      vitest:
+        specifier: ^3.0.9
+        version: 3.2.6(@types/node@25.9.1)(jiti@2.7.0)(yaml@2.9.0)
+
   packages/config:
     dependencies:
       tailwindcss:
@@ -580,6 +605,12 @@ packages:
 
   '@testcontainers/postgresql@10.28.0':
     resolution: {integrity: sha512-NN25rruG5D4Q7pCNIJuHwB+G85OSeJ3xHZ2fWx0O6sPoPEfCYwvpj8mq99cyn68nxFkFYZeyrZJtSFO+FnydiA==}
+
+  '@trpc/server@11.17.0':
+    resolution: {integrity: sha512-jbAOUe0PpUTCYqziyu+8vYXZdDXPudZgnEhWCQ2NjKnVEjfE93RqHTt1oycZJv/HNf51YlRXfEEwSIAbb161rw==}
+    hasBin: true
+    peerDependencies:
+      typescript: '>=5.7.2'
 
   '@turbo/darwin-64@2.9.16':
     resolution: {integrity: sha512-jLjApWTSNd7JZ5JaLYfelW1ytnGQOvB7ivl+2RD1xQvJTbi8I9gBjzcga7tDZVPyaxpl10YTfJt3BrYXR18KDw==}
@@ -2600,6 +2631,10 @@ snapshots:
       - bare-buffer
       - react-native-b4a
       - supports-color
+
+  '@trpc/server@11.17.0(typescript@5.9.3)':
+    dependencies:
+      typescript: 5.9.3
 
   '@turbo/darwin-64@2.9.16':
     optional: true
