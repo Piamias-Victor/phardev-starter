@@ -1,0 +1,34 @@
+{
+  "name": "web",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "dependencies": {
+    "@auth/prisma-adapter": "^2.9.1",
+    "@phardev/db": "workspace:*",
+    "@phardev/trpc": "workspace:*",
+    "@tanstack/react-query": "^5.80.2",
+    "@trpc/client": "^11.17.0",
+    "@trpc/react-query": "^11.17.0",
+    "@trpc/server": "^11.17.0",
+    "next": "^15.3.3",
+    "next-auth": "^5.0.0-beta.29",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "zod": "^3.25.28"
+  },
+  "devDependencies": {
+    "@phardev/config": "workspace:*",
+    "@types/node": "^22.15.21",
+    "@types/react": "^19.1.5",
+    "@types/react-dom": "^19.1.5",
+    "typescript": "^5.8.3"
+  }
+}
