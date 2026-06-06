@@ -1,4 +1,5 @@
 import type { User } from "@repo/core";
+import type { UpdateProfileInput } from "@repo/validators";
 
 /**
  * Services injected into every tRPC context (ADR-0001: no Prisma in @repo/api).
@@ -7,6 +8,7 @@ import type { User } from "@repo/core";
  */
 export type Services = {
   getUserById: (id: string) => Promise<User>;
+  updateProfile: (id: string, input: UpdateProfileInput) => Promise<User>;
 };
 
 export type Session = {
