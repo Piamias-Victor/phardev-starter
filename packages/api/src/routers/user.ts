@@ -1,12 +1,8 @@
-import { z } from "zod";
 import { updateProfileSchema } from "@repo/validators";
 import { protectedProcedure, router } from "../trpc.js";
 
+// Reads go RSC → Service direct (ADR-0003). This router contains mutations only.
 export const userRouter = router({
-  getById: protectedProcedure
-    .input(z.object({ id: z.string() }))
-    .query(({ ctx, input }) => ctx.services.getUserById(input.id)),
-
   updateProfile: protectedProcedure
     .input(updateProfileSchema)
     .mutation(({ ctx, input }) =>

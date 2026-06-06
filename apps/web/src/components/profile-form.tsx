@@ -5,7 +5,6 @@ import { trpc } from "@/trpc/client";
 import { Button } from "@/components/ui/button";
 
 interface ProfileFormProps {
-  userId: string;
   currentName: string;
 }
 

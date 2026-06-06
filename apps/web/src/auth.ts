@@ -2,10 +2,7 @@ import NextAuth from "next-auth";
 import GitHub from "next-auth/providers/github";
 import Google from "next-auth/providers/google";
 import { PrismaAdapter } from "@auth/prisma-adapter";
-import { PrismaClient } from "@repo/db";
-
-// Single PrismaClient instance for auth (database sessions — ADR-0002)
-const prisma = new PrismaClient();
+import { prisma } from "@/lib/prisma";
 
 export const { handlers, auth, signIn, signOut } = NextAuth({
   adapter: PrismaAdapter(prisma),
@@ -33,5 +30,10 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
   pages: {
     // Custom error page avoids the built-in one which crashes on Next.js 15
     error: "/auth/error",
+  },
+  logger: {
+    error(code, ...message) {
+      console.error("[auth][error]", code, JSON.stringify(message, null, 2));
+    },
   },
 });
