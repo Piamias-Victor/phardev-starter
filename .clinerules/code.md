@@ -1,0 +1,1 @@
+Mode implémentation stricte. Interdits absolus : fichiers >100 lignes, any TS, valeurs hardcodées, fetch HTTP vers nos routes dans RSC, données serveur dans Zustand, imports relatifs profonds. Validation après chaque fichier : pnpm typecheck + pnpm lint.

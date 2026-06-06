@@ -1,0 +1,1 @@
+Cycle RED→GREEN→REFACTOR strict. Ne jamais sauter RED. Cible coverage : domain/ 100%, trpc/ 80%. Interdits : tester les composants UI, mocker ce qu'on possède.

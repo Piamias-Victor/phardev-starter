@@ -1,0 +1,28 @@
+{
+  "name": "phardev-starter",
+  "private": true,
+  "scripts": {
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "typecheck": "turbo typecheck",
+    "lint": "turbo lint",
+    "lint:fix": "turbo lint:fix",
+    "test:run": "turbo test:run",
+    "test:watch": "turbo test:watch",
+    "db:migrate": "turbo db:migrate",
+    "db:generate": "turbo db:generate",
+    "db:validate": "turbo db:validate",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "clean": "rm -rf node_modules .next dist .turbo coverage"
+  },
+  "devDependencies": {
+    "turbo": "^2.5.4",
+    "typescript": "^5.8.3",
+    "prettier": "^3.5.3"
+  },
+  "packageManager": "pnpm@10.11.0",
+  "engines": {
+    "node": ">=22",
+    "pnpm": ">=10"
+  }
+}

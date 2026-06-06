@@ -1,0 +1,1 @@
+Revue sécurité OWASP + qualité R1-R10. READ-ONLY. Checklist : zéro secret dans les logs, validation Zod sur toutes les entrées, Argon2id pour passwords, headers sécurité Next.js, zéro dangerouslySetInnerHTML sans sanitisation.

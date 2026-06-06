@@ -1,0 +1,1 @@
+# Glossaire du domaine — phardev-starter

@@ -1,0 +1,1 @@
+Mode analyse READ-ONLY. Interdits : créer/modifier des fichiers, écrire du code. Checklist : fichiers impactés, dépendances inter-packages, risques de régression, décisions irréversibles. Référence dogmes R1-R10.
