@@ -18,3 +18,4 @@ packages/db/src/generated/
 *.log
 .DS_Store
 coverage/
+apps/web/tsconfig.tsbuildinfo

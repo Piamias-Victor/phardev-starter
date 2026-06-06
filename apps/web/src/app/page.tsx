@@ -1,6 +1,7 @@
 // Server Component — reads data directly (ADR-0003: RSC → Service direct).
 // No tRPC call here; tRPC is for Client Components and mutations.
 import { HelloClient } from "@/components/hello-client";
+import { AuthButton } from "@/components/auth-button";
 
 export default function HomePage() {
   // RSC path: in a real feature this would call a Service from @repo/core.
@@ -17,6 +18,8 @@ export default function HomePage() {
         </p>
         <p className="text-lg">{serverMessage}</p>
       </div>
+
+      <AuthButton />
 
       <HelloClient />
     </main>
