@@ -1,0 +1,20 @@
+# deps
+node_modules/
+
+# build
+dist/
+.next/
+out/
+.turbo/
+
+# env
+.env
+.env*.local
+
+# prisma generated client
+packages/db/generated/
+
+# misc
+*.log
+.DS_Store
+coverage/

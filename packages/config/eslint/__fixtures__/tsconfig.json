@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "moduleResolution": "Bundler",
+    "module": "ESNext",
+    "paths": {
+      "@repo/db": ["packages/db/src/index.ts"],
+      "@repo/validators": ["packages/validators/src/index.ts"]
+    }
+  }
+}

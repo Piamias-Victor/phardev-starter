@@ -1,0 +1,4 @@
+{
+  "*.{ts,tsx,md,json,css}": "prettier --write",
+  "*.{ts,tsx}": ["bash -c 'pnpm typecheck'", "bash -c 'pnpm test'"]
+}
