@@ -1,0 +1,24 @@
+{
+  "name": "@phardev/db",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./client": "./src/client.ts",
+    "./repositories": "./src/repositories/index.ts"
+  },
+  "scripts": {
+    "db:generate": "prisma generate",
+    "db:migrate": "prisma migrate dev",
+    "db:validate": "DATABASE_URL=postgresql://localhost/placeholder prisma validate",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.9.0"
+  },
+  "devDependencies": {
+    "@phardev/config": "workspace:*",
+    "prisma": "^6.9.0",
+    "typescript": "^5.8.3"
+  }
+}
