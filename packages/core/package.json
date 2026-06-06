@@ -13,7 +13,8 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "@repo/db": "workspace:*"
+    "@repo/db": "workspace:*",
+    "@repo/validators": "workspace:*"
   },
   "devDependencies": {
     "@repo/config": "workspace:*",

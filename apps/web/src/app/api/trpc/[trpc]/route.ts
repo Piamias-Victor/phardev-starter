@@ -1,6 +1,6 @@
 import { fetchRequestHandler } from "@trpc/server/adapters/fetch";
 import { appRouter } from "@repo/api/router";
-import { getUserById } from "@repo/core";
+import { getUserById, updateProfile } from "@repo/core";
 import { PrismaClient } from "@repo/db";
 import { auth } from "@/auth";
 import type { Context } from "@repo/api";
@@ -23,8 +23,9 @@ async function createContext(): Promise<Context> {
         }
       : null,
     services: {
-      // getUserById pre-bound with prisma (ADR-0001: no Prisma in @repo/api)
+      // Services pre-bound with prisma (ADR-0001: no Prisma in @repo/api)
       getUserById: (id: string) => getUserById(prisma, id),
+      updateProfile: (id: string, input) => updateProfile(prisma, id, input),
     },
   };
 }

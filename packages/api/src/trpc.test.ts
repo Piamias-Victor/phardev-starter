@@ -12,7 +12,10 @@ import type { Context } from "./context.js";
 // Minimal context — error middleware tests don't need session or real services
 const noSessionCtx: Context = {
   session: null,
-  services: { getUserById: () => Promise.reject(new Error("not used")) },
+  services: {
+    getUserById: () => Promise.reject(new Error("not used")),
+    updateProfile: () => Promise.reject(new Error("not used")),
+  },
 };
 
 function makeThrowingRouter(thrower: () => never) {

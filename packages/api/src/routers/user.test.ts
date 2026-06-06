@@ -12,7 +12,10 @@ const authedCtx = (
     user: { id: "u1", email: "alice@example.com" },
     expires: "2099-01-01",
   },
-  services: { getUserById },
+  services: {
+    getUserById,
+    updateProfile: () => Promise.reject(new Error("not used in these tests")),
+  },
 });
 
 const appRouter = router({ user: userRouter });
