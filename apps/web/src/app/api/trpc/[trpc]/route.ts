@@ -1,14 +1,30 @@
 import { fetchRequestHandler } from "@trpc/server/adapters/fetch";
 import { appRouter } from "@repo/api/router";
+import { getUserById } from "@repo/core";
+import { PrismaClient } from "@repo/db";
+import { auth } from "@/auth";
 import type { Context } from "@repo/api";
 
-function createContext(): Context {
-  // Auth + services wired here in ticket #10 (NextAuth + PrismaClient binding).
-  // For now: no session, no real services (hello router needs neither).
+const prisma = new PrismaClient();
+
+async function createContext(): Promise<Context> {
+  const session = await auth();
+
   return {
-    session: null,
+    // NextAuth Session shape -> tRPC Context Session shape
+    session: session?.user?.id
+      ? {
+          user: {
+            id: session.user.id,
+            email: session.user.email ?? "",
+            name: session.user.name,
+          },
+          expires: session.expires,
+        }
+      : null,
     services: {
-      getUserById: () => Promise.reject(new Error("not yet wired")),
+      // getUserById pre-bound with prisma (ADR-0001: no Prisma in @repo/api)
+      getUserById: (id: string) => getUserById(prisma, id),
     },
   };
 }

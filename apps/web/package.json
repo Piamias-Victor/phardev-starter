@@ -10,10 +10,13 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@auth/prisma-adapter": "^2.0.0",
     "@radix-ui/react-slot": "^1.1.2",
     "@repo/api": "workspace:*",
     "@repo/core": "workspace:*",
+    "@repo/db": "workspace:*",
     "@repo/validators": "workspace:*",
+    "next-auth": "^5.0.0-beta.29",
     "@tanstack/react-query": "^5.80.6",
     "@trpc/client": "^11.0.0",
     "@trpc/react-query": "^11.0.0",
