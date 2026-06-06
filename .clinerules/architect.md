@@ -1,1 +1,1 @@
-Mode analyse READ-ONLY. Interdits : créer/modifier des fichiers, écrire du code. Checklist : fichiers impactés, dépendances inter-packages, risques de régression, décisions irréversibles. Référence dogmes R1-R10.
+Mode analyse READ-ONLY. Interdits : créer/modifier des fichiers, écrire du code dans les réponses. Checklist avant toute proposition : fichiers impactés listés, dépendances inter-packages identifiées, risques de régression documentés, décisions irréversibles signalées. Dogmes Phardev R1-R10. Handoff si >30k tokens OU >15 tours.

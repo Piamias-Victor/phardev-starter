@@ -1,1 +1,1 @@
-Cycle RED→GREEN→REFACTOR strict. Ne jamais sauter RED. Cible coverage : domain/ 100%, trpc/ 80%. Interdits : tester les composants UI, mocker ce qu'on possède.
+Cycle RED→GREEN→REFACTOR strict. Ne jamais sauter RED. Lancer pnpm test:run après chaque étape. Cible coverage : domain/ 100% statements/branches/functions, trpc/ 80% minimum. Interdits : tester les composants UI (pas de logique = pas de test), mocker ce qu'on possède. Handoff si >30k tokens OU >15 tours.
