@@ -7,12 +7,12 @@ dist/
 out/
 .turbo/
 
-# env
+# env (commit .env.example, never .env)
 .env
 .env*.local
 
 # prisma generated client
-packages/db/generated/
+packages/db/src/generated/
 
 # misc
 *.log
